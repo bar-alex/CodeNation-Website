@@ -1,0 +1,143 @@
+/* fonts and stuff */
+
+/* font for the story => font-family: 'Syne Mono', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+/* font for paper notes and stuff, maybe  =>  font-family: 'Shadows Into Light', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+/* @import 'pipboy-style.css'; */
+
+
+/* this is a css comment */
+
+*{
+    box-sizing: border-box;
+    /* padding: 5px; */
+    padding: 5px 5px 5px 5px;
+}
+
+
+/* ----------------------------------- */
+/* this is the styling for the nav bar */
+
+#navbar{
+    margin: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    color: white;
+    /* background-color: rgba(0, 150, 0, 0.75); */
+    /* border: 1px solid #c333; */
+    background-color: rgba(0, 128, 0, 0.925);
+    /* background-color: black; */
+    /* background-image: radial-gradient( rgba(0, 150, 0, 0.75), white 120% ); */
+    /* background-image: linear-gradient( rgba(0, 150, 0, 0.75), white 120% ); */
+    background-image: linear-gradient( rgba(0, 150, 0, 0.75), white 180% );
+    background-image: linear-gradient( rgba(0, 150, 0, 0.75), black 120%, white 200% );
+}
+
+#navbar a{
+    /* display: flex; */
+    /* align-items: right; */
+    width: auto;
+    float: left;
+    /* display: block; */
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.flex-spacer{
+    /* display: flex; */
+    /* flex: 1; */
+    display: flex;
+    flex-grow: 1;
+    /* visibility: hidden; */
+}
+
+
+.carbon-fibre{
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;
+}
+
+
+
+/* ---------------------------------------------- */
+/* these are the styles for text effects and such */
+
+/* the text for the story elements */
+.story{
+    color: white;
+    font: 1.25rem 'Syne Mono', monospace;
+    /* font-family: 'Syne Mono', monospace; */
+    text-shadow: 0 0 5px #C8C8C8;
+}
+
+.hand-note{
+    color: white;
+    font: 1rem 'Shadows Into Light', cursive;
+    /* font: 1.25rem 'Shadows Into Light', cursive; */
+    /* font-family: 'Shadows Into Light', cursive; */
+    text-shadow: 0 0 5px #C8C8C8;
+}
+
+
+/* ------------------------------------------ */
+/* this style is for the body */
+
+/* terminal style */
+body {
+    background-color: black;
+    background-image: radial-gradient( rgba(0, 150, 0, 0.75), black 120% );
+    height: 100vh;
+    color: white;
+    font: 1.25rem Inconsolata, monospace; 
+    text-shadow: 0 0 5px #C8C8C8;
+    /* padding: 5px 5px 5px 5px; */
+    /* margin: 20px 40px 20px 40px; */
+    margin: 0 3em 0 3em;
+}
+
+
+
+
+/* ------------------------------------------ */
+/* this style is for rows and columns */
+
+/* flex box row and columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Create four equal columns */
+.column {
+    flex: 25%;
+    padding: 20px;
+  }
+
+
+/* 
+#socialbuttons{
+
+}
+
+#contacts{
+
+}
+
+.gameimg{
+
+} */

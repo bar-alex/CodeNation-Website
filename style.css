@@ -6,6 +6,12 @@
 /* font for paper notes and stuff, maybe  =>  font-family: 'Shadows Into Light', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
+/* nice cursive font => font-family: 'Sansita Swashed', cursive; */
+/* @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400&display=swap'); */
+
+/* nice cursive font => font-family: 'Sansita', sans-serif; */
+/* @import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap'); */
+
 
 /* @import 'pipboy-style.css'; */
 
@@ -14,8 +20,31 @@
 
 *{
     box-sizing: border-box;
-    /* padding: 5px; */
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
+    /* padding: 5px 5px 5px 5px; */
+}
+
+
+/* terminal style */
+body {
+    background-color: black;
+    /* background-image: radial-gradient( rgba(0, 150, 0, 0.75), black 120% ); */
+    background-image: radial-gradient( rgba(0, 150, 0, 0.664), black 120% );
+    background-attachment: fixed;
+    /* position: absolute; */
+    
+    /* background-image:radial-gradient(#444, #111); */
+    height: 100vh;
+    color: white;
+    font: 1.25rem Inconsolata, monospace; 
+    text-shadow: 0 0 5px #C8C8C8;
+    /* padding: 5px 5px 5px 5px; */
+    /* margin: 20px 40px 20px 40px; */
+    margin: 0 4em 0 4em;
+}
+
+a {
+    color: aquamarine;
 }
 
 
@@ -31,15 +60,11 @@
     justify-content: flex-start;
     align-items: baseline;
     color: white;
-    /* background-color: rgba(0, 150, 0, 0.75); */
-    /* border: 1px solid #c333; */
-    background-color: rgba(0, 128, 0, 0.925);
-    /* background-color: black; */
-    /* background-image: radial-gradient( rgba(0, 150, 0, 0.75), white 120% ); */
-    /* background-image: linear-gradient( rgba(0, 150, 0, 0.75), white 120% ); */
-    background-image: linear-gradient( rgba(0, 150, 0, 0.75), white 180% );
-    background-image: linear-gradient( rgba(0, 150, 0, 0.75), black 120%, white 200% );
+
+    background-image: linear-gradient( black 2%, white 3%, rgba(0, 150, 0, 0.5) 8%, black 98%, white 99% );
+    /* background-image: linear-gradient( to top, rgba(0, 150, 0, 0.75), black 120%, white 200% ); */
 }
+
 
 #navbar a{
     /* display: flex; */
@@ -47,21 +72,40 @@
     width: auto;
     float: left;
     /* display: block; */
-    color: white;
+    /* color: white; */
+    color: aquamarine;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+
+    box-shadow: inset 0 0 0 0 aquamarine;
+    /* box-shadow: inset 0 0 0 0 #54b3d6; */
+    /* color: #54b3d6; */
+    margin: 0 -.25rem;
+    /* padding: 0 .25rem; */
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;    
 }
 
-.flex-spacer{
-    /* display: flex; */
-    /* flex: 1; */
+#navbar a:hover{
+    /* box-shadow: inset 100px 0 0 0 #54b3d6; */
+    /* box-shadow: inset 100px 0 0 0 aquamarine; */
+    /* color: white; */
+    /* box-shadow: inset 100px 0 0 0 rgba(127, 255, 212, 0.178); */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    color: rgb(0, 150, 0)
+    
+}
+
+
+/* .flex-spacer{
+    /* display: flex; 
+    /* flex: 1; 
     display: flex;
     flex-grow: 1;
-    /* visibility: hidden; */
-}
+    /* visibility: hidden; 
+} */
 
-
+/* 
 .carbon-fibre{
     background:
     radial-gradient(black 15%, transparent 16%) 0 0,
@@ -70,19 +114,70 @@
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
     background-color:#282828;
     background-size:16px 16px;
+} */
+
+
+#goTop{
+    position: fixed;
+    /* position:absolute; */
+    /* padding: 10px; */
+    /* top: 90%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 50px; */
+    /* right: 3em; */
+    bottom: 20px;
+    /* right: 10px; */
+    /* left: 30px; */
+    left:2em;
+    transform: rotate(90deg);
+    /* padding-bottom: 1em; */
+}
+#goTop a{
+    text-decoration:none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    /* transition:transform 0.25s ease; */
+
+    box-shadow: inset 0 0 0 0 aquamarine;
+    /* box-shadow: inset 0 0 0 0 #54b3d6; */
+    /* color: #54b3d6; */
+    margin: 0 -.25rem;
+    /* padding: 0 .25rem; */
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;    
+
+}
+#goTop a:hover{
+    transform: scale(1.3);
+    text-shadow: 0 0 5px #C8C8C8;
+
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    color: rgb(0, 150, 0)    
 }
 
-
-
-/* ---------------------------------------------- */
-/* these are the styles for text effects and such */
 
 /* the text for the story elements */
 .story{
     color: white;
     font: 1.25rem 'Syne Mono', monospace;
+    /* font: 1.25rem 'Sansita', sans-serif;     */
     /* font-family: 'Syne Mono', monospace; */
-    text-shadow: 0 0 5px #C8C8C8;
+    /* text-shadow: 0 0 5px #C8C8C8; */
+}
+
+/* the text for the story elements */
+.story-h2{
+    color: white;
+    font: 'Syne Mono', monospace;
+    /* font: 1.25rem 'Sansita', sans-serif;     */
+    /* font-family: 'Syne Mono', monospace; */
+    /* text-shadow: 0 0 5px #C8C8C8; */
+}
+
+.story-h1{
+    color: white;
+    font: 'Syne Mono', monospace;
 }
 
 .hand-note{
@@ -93,40 +188,112 @@
     text-shadow: 0 0 5px #C8C8C8;
 }
 
-
-/* ------------------------------------------ */
-/* this style is for the body */
-
-/* terminal style */
-body {
-    background-color: black;
-    background-image: radial-gradient( rgba(0, 150, 0, 0.75), black 120% );
-    height: 100vh;
+.quote-note{
     color: white;
-    font: 1.25rem Inconsolata, monospace; 
+    font: 1.25rem 'Shadows Into Light', cursive;
     text-shadow: 0 0 5px #C8C8C8;
-    /* padding: 5px 5px 5px 5px; */
-    /* margin: 20px 40px 20px 40px; */
-    margin: 0 3em 0 3em;
 }
 
+.note-paper {
+    background: lightyellow;
+    border: 1px solid yellow;
+    padding: 1rem;
+  }
+
+/* ------------------------------------------ */
+/* styles for the images */
+figure{
+    /* box-sizing:content-box; */
+    text-align: center;
+    /* text-transform: uppercase; */
+    padding: .2em;
+    margin: 0;
+    width: 20%;
+    /* max-width: 20%; */
+    /* overflow:hidden; */
+    /* box-sizing:content-box; */
+}
+
+.img-game{
+    /* object-fit: contain; */
+    max-width: 100%;
+    max-height:100%;
+    /* display: block; */
+    transition:transform 0.25s ease;
+}
+
+.img-game:hover {
+    /* -webkit-transform:scale(2.5); */
+    transform:scale(2.5);
+    
+}
+
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+
+.float-left{
+    float: left;
+    margin-right: 1em;
+}
+
+.float-right{
+    float: right;
+    margin-left: 1em;
+}
+
+
+.list-names{
+    list-style: none;
+}
+.list-names li::before {
+    content: "🤷‍♀️";
+    display: inline-block;
+    margin-right: 0.2rem;
+}
+
+.contacts-list {
+    list-style-type: "→ ";
+    list-style-position: inside;
+}
+
+.generic-list{
+    list-style-type: "→ ";
+    list-style-position: inside;
+}
+
+
+/* full justify */
+/* .full-justify{
+    text-align: justify;
+    /* text-justify: inter-word;
+    text-justify: inter-character;
+} */
 
 
 
 /* ------------------------------------------ */
 /* this style is for rows and columns */
 
-/* flex box row and columns */
+/* flex box row and columns
 .row {
     display: flex;
     flex-wrap: wrap;
   }
 
-  /* Create four equal columns */
+  /* Create four equal columns 
 .column {
     flex: 25%;
     padding: 20px;
-  }
+  } */
 
 
 /* 
@@ -141,3 +308,4 @@ body {
 .gameimg{
 
 } */
+

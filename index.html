@@ -5,38 +5,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>My Webpage</title>
+    <title>the_Game - text based python game</title>
 </head>
 <body>
+
+    <!-- <div id="top-of-page"></div> -->
+    <img id="top-of-page">
+    <!-- the go to top link that's sticky -->
+    <div id="goTop"><a href="#top-of-page"><=</a></div>
+
     <!-- the menu -->
     <div id="navbar">
+        <span class="story">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-
-        <div class=".flex-spacer carbon-fibre"></div>
-        <div class="hand-note"> "This is my church, this is where I heal  my hurts" - Faithless </div>
+        </span>
+        <!-- <div class=".flex-spacer carbon-fibre"></div>
+        <div class="hand-note"> "This is my church, this is where I heal  my hurts" - Faithless </div> -->
     </div>
-    
+
+
+
+    <!-- for tests -->
+    <!-- <a href="test-flexbox-far-right-item.html">test: flex justify right</a>
+    <a href="test-custom-scrollbar.html">test: custom scrollbar</a>
+    <a href="test-pipboy-style.html">test: pipboy style</a>  -->
+
 
     <!-- the story of the page -->
+    <!-- <div class="column"> -->
     <div>
-        <h1> the_Game </h1>
-        <p>"the_Game" is a python project we have completed during our python coding curse at CodeNation. 
-        <br>It's a text based game, with D&D style battle system (dice rolls), rpg elements, inventory system, random encounters and loot drops, where you have to go and kill each type of monster from the available list, in order to win. It also features colorized ascii art graphics (from public domain, credit in ascii art was kept where present).
-        <br>Be mindful though "the_Game" was built on the span of a few days, by students trying to understand python and how it works. So even if there are no game-breaking bugs as we know, unexpected stuff might still happen. At some point, changes could be made and an update notice will be placed on this website when that happens.</p>
+        <h2 class="story-h1">= the_Game =</h2>
+
+        <figure class="imgbox float-right">
+            <img class="img-game" 
+                src="game_screens\the_game_start.png"
+                alt="ascii art of a water snake and a ship in a picturesque setting  with text describing the story and the objectives for the player">
+        </figure>
+
+        <p class="story">
+            "the_Game" is a python project we have completed during our python coding curse at CodeNation. 
+            <br>It's a text based game, with D&D style battle system (dice rolls), rpg elements, inventory system, random encounters and loot drops, where you have to go and kill each type of monster from the available list, in order to win. It also features colorized ascii art graphics (from public domain, credit in ascii art was kept where present).
+            <br>Be mindful though "the_Game" was built on the span of a few days, by students trying to understand python and how it works. So even if there are no game-breaking bugs as we know, unexpected stuff might still happen. At some point, changes could be made and an update notice will be placed on this website when that happens.
+        </p>
         
-        <div class="story">
-        <p>The story of the game sees you in front of the king, who is feeling old and feeble and is worried about it's kingdom as it has no male hairs to take over his crown. Having this situation on his hands, he decides to let everyone who whishes the crown to go forth and kill one creature of each type, including the boss of the game, a mighty dragon called Drogo.
+        <br>
+
+        <h2 class="story-h2">:: The story ::</h2>
+
+        <figure class="imgbox float-right">
+           <img class="img-game" 
+                src="game_screens\the_game_next_tile_monster.png"
+                alt="ascii art of water snake with options to fight or cancel">
+            <img class="img-game" 
+                src="game_screens\the_game_next_tile_monster_2.png" 
+                alt="ascii art of vampire with options to fight or cancel">
+            <img class="img-game" 
+                src="game_screens\the_game_next_tile_monster_3.png"
+                alt="ascii art of a wolf with options to fight or cancel">
+            <img class="img-game" 
+                src="game_screens\the_game_next_tile_event_2.png"
+                alt="ascii art of a fountain and text describing the options a player can choose">
+    
+        </figure>
+    
+        <p class="story">The story of the game sees you in front of the king, who is feeling old and feeble and is worried about it's kingdom as it has no male hairs to take over his crown. Having this situation on his hands, he decides to let everyone who whishes the crown to go forth and kill one creature of each type, including the boss of the game, a mighty dragon called Drogo.
         <br><br>
-        As it happens, the kingdom is conveniently surrounded by a forest where all the creatures are to be found, a magical forest, where up, down, left and right have no real meaning, and you aimlessly wander about and looking for, and fighting any creature that you encounter. Occasionally you encounter an event that you have to deal with - some or good, some or not.
+        As it happens, the kingdom is conveniently surrounded by a forest where all the creatures are to be found, a magical forest, where up, down, left and right have no real meaning and you aimlessly wander about, looking for, and fighting any monster that you encounter - we have 9 types so far in the game. 
         <br><br>
-        As with any good rpg game, you have a set of stats (HP, ATK, DEF) that influences your battles and available options, items that you equip (Weapon, Armor) and maybe a couple of items you can make use of, for special actions. And they can be found at event sites, or dropped by defeated monsters.
+        Occasionally you encounter an event (there are 4 in the game) that you have to deal with - some are good, some are not and they might affect one of your stats (like HP), provide you with an equipment piece (sword, armor) or an item that could enable you to use a special action - like a Sleeping Bag that will enable you to take a nap and get your health back. Actually that should be a 50/50 chance for either recovering full HP or getting attacked by a monster, however the later functionality has ben put on hold for now, and will be implemented in the future. 
+        <br><br>
+        As with any good rpg game, you have a set of stats (HP, ATK, DEF) that influences your battles and available options, items that you equip (Weapon, Armor) and a couple of items you can make use of, with special actions (already mentioned the sleeping bag). Other items already in the game, will have actions that affects the fight, for example there's a 'Porter Cube that will allow the player to escape a monster confrontation, there's the Gorgon's Head that will offer the option to petrify the monster, an 8ball item that gives a small change for a significant advance towards the goal of the game.
+        Any of them can be found at event sites, or dropped by defeated monsters, based on random chance. 
+        <br><br>
+        Some of the items will have their specific action available before the fight with the monster, while other will make it available after the battle (for example the sleeping bag, to recover your HP), but events on the other hand will have their own actions, depending on the event. One of them is a death-trap, meaning no action, you're just notified how the event kills you basically, while others give you the option to search for an item - chance for a item drop, and another one will restore your HP.
         </p>
 
-        </div>
+        <br>
+        
+        <h2 class="story-h2">:: The Battle ::</h2>
+
+        <figure class="float-right">
+            <img class="img-game" 
+                src="game_screens\the_game_monster_fight.png"
+                alt="text describing the battle and the results of the fight with the monster">
+            <img class="img-game center-fit" 
+                src="game_screens\the_game_monster_drop.png"
+                alt="text describing how the monster was defeated and the item dropped">
+            <img class="img-game" 
+                src="game_screens\the_game_status_screen.png"
+                alt="text describing the status points and the inventory of the player">
+            <img class="img-game" 
+                src="game_screens\the_game_finish_lost.png"
+                alt="ascii art of a skull and bones symbol with text describing how the player lost the game">
+                
+        </figure>
+
+        <p class="story">
+        Once you encounter the monster, a battle ensures. Having an item with an effect that will influence the upcoming battle will enable another option for you to choose from in your action list. And here the actions for the 'Porter cube ("Teleport to safety") or the Gorgon's Head ("Petrify the monster") will be available. Please note that this functionality is not in the game yet, however that's on the todo list.
+        <br><br>
+        Having chosen not to use any items, you will have to fight the monster and we do this using a system of dice rolls similar to Dungeon & Dragons games, where the attacker has an attack stat (ATK), will roll the dice and the number will be added to it's attack, then the defender will roll the dice and add the number to it's defence stat (DEF) and the difference between's the attacker's ATK number and the defender's DEF number will decide how many points will be subtracted from the defender's HP, if any. Then the defender attacks in turn, in the same manner, until the one of the opponents is defeated. 
+        <br><br>
+        If the monster is defeated there's a chance it will drop a piece of equipment (weapon, armor) a potion or an item. If you are defeated, that is your HP goes to 0, one of two things will happen, if you have a potion of restoration (called potion of Angel's Tears in the game) it will automatically be used to restore your full HP and oyu live to fight another day. On the other hand, if you're out of potions, then you're properly dead in game and you're presented with the "Game Over: You Lost" screen.
+        <br><br>
+        It wouldn't be fun to get all these items into your inventory, so we have a limit in place for a maximum of 3. Getting a new item when your inventory is full, will prompt you to either discard this item, or chose one item from your inventory to replace with the new drop. When you're asked to choose an action, one of the options is to view your stats and that will present you with a screen detailing your stats in game (HP, ATK, DEF), your equipped items (Weapon, Armor), the number of recovery potions you have, the items in your inventory, the monsters you have killed so far and how many there are left to kill in order to win the game.
+        </p>
+
+        <h2 class="story-h2">:: Planned improvements ::</h2>
+
+        <ul class="story generic-list">
+            <li>The random chance system - adjustments are necessary because at the moment there are cases where it cycles between a few monsters, or drops gives more recovery potions than necessary, etc</li>
+            <li>The battle system - there's a need to limit the number of turns if both of the opponents are not able to damage the other one, otherwise it will go forever</li>
+            <li>Implement the special actions for the 'Porter Cube, Gorgon's Head and the 8-Ball</li>
+            <li>Add some more items, monsters and events - it's easier because all the data is in the "ascii_" text files, there's hardly any need to change the code for these</li>
+            <li>Implement a magic system into the game and a mana pool to use the magic, some items could use magics or affect the mana pool</li>
+            <li>Implementing a magic system will require either sleep to recover mana or potions - a change to the potion system will be needed in that case</li>
+        </ul>
 
     </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
     <p class="hand-note">

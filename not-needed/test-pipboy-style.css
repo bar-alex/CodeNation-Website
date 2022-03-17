@@ -1,6 +1,15 @@
+/* .box{
+    box-sizing:border-box;
+    overflow: auto;
+    height: 200px;
+    width: 400px;
+    max-height: 300px;
+    max-height: 500px;
+} */
+
 body {
     background-color:#000;
-    margin:0;
+    margin: 40px;
     overflow:hidden;
     padding:0;
 }

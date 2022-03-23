@@ -43,6 +43,8 @@ body {
     margin: 0 4em 0 4em;
 }
 
+
+
 a {
     color: aquamarine;
 }
@@ -130,7 +132,7 @@ a {
     bottom: 20px;
     /* right: 10px; */
     /* left: 30px; */
-    left:2em;
+    left:2.5em;
     transform: rotate(90deg);
     /* padding-bottom: 1em; */
 }
@@ -255,7 +257,8 @@ figure{
     list-style: none;
 }
 .list-names li::before {
-    content: "🤷‍♀️";
+    /* content: "🤷‍♀️"; */
+    content: "🙍";
     display: inline-block;
     margin-right: 0.2rem;
 }
@@ -269,6 +272,19 @@ figure{
     list-style-type: "→ ";
     list-style-position: inside;
 }
+
+
+/* only for mobile */
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0 0.2em 0 0.5em;
+    }
+    #goTop {
+        left:0em;
+    }
+  }
+
+
 
 
 /* full justify */
